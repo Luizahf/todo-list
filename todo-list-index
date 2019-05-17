@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Viagem dos Mozis</title>
+    </head>        
+    <body>
+        <div id="todo-container"></div>
+        <div id="done-container"></div>
+
+        <script src="scripts\global-storage.js"></script>
+        <script src="scripts\guid-generator.js"></script>
+        <script src="scripts\todo-item.js"></script>
+    </body>
+</html>
