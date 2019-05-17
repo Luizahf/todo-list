@@ -1,0 +1,122 @@
+body {
+    background-image: url(background.jpg);
+    font-family: "Courier New";
+    color: rgb(59, 59, 59) ;
+}
+
+/* ----- HEADER ----- */
+h1 {
+    font-size: 350%;
+    font-weight: 200;
+    margin-left: 23%;
+ 
+}       
+
+.todo-item {
+    font-size: 25px;
+    line-height: 0px;
+    text-align:left ;
+    margin-left: 27%;
+    margin-top: 0px;
+}
+
+h1, img {
+    margin-top: 83px;
+    display: inline;
+
+}
+
+img {
+    width: 80px;
+}
+
+img:hover {
+    cursor: pointer;
+    border-color: black;
+}
+
+/* ----- DONE MODAL ----- */
+
+.doneModal {
+    position: absolute;
+    left: 47%;
+    top: 18%;
+    width: 400px;
+    background-color: rgba(157, 216, 240, 0.712);
+    border-radius: 15px;
+    opacity: 1;
+    visibility: hidden;
+    
+}
+
+.showDoneModal {
+    visibility: visible;
+}
+
+h2 {
+    margin-top: 10%;
+    font-size: 180%;
+    margin-bottom: 15px;
+    margin-left: 11%;
+}
+
+.done-item {
+    font-size: 24px;
+    color: black;
+    text-align:left;
+    margin-left: 10%;
+    margin-top: 0px;
+    line-height: 26px;
+}
+
+/* ----- ADD ITEM ----- */
+
+.add {
+    margin-top: 15px;
+    margin-bottom: 6px;
+    margin-left: 640px;
+    width: 35px;
+}
+
+/* ----- CREATE ITEM ----- */
+.createItemModal {
+    position: absolute;
+    left: 20%;
+    top: 21%;
+    width: 0px;
+    height: 0px;
+    background-color: rgba(157, 216, 240, 0.445);
+    border-radius: 15px;
+    opacity: 1;
+    visibility: hidden;
+    
+}
+
+.showCreateItemModal {
+    visibility: visible;
+}
+
+.createItemModal input {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 3px;
+    width: 250px;
+    height: 35px;
+    background-color: rgba(157, 216, 240, 0.507);
+    border-radius: 15px;
+    text-align: center;
+    opacity: 1;
+    font-size: 20px;
+    color: rgb(59, 59, 59) ;
+
+}
+
+i {
+    color: rgb(110, 110, 110);
+}
+
+i:hover {
+    color: rgb(138, 137, 137);
+    cursor: pointer;
+}
+

@@ -2,14 +2,33 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Viagem dos Mozis</title>
+        <link rel="stylesheet" type="text/css" href="..\todo-list\styles\todo-list-style.css">
+        <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet">
+
+        <title>To do list</title>
     </head>        
     <body>
-        <div id="todo-container"></div>
-        <div id="done-container"></div>
 
-        <script src="scripts\global-storage.js"></script>
-        <script src="scripts\guid-generator.js"></script>
-        <script src="scripts\todo-item.js"></script>
+        <h1>Things to do</h1> <img id="checkmark" src="..\todo-list\images\checkmark.jpg">
+
+        <div><img id="add" class="add" src="..\todo-list\images\plus.png"></div>
+
+        <div class="createItemModal" id="createItemModal">
+            <div id="done-container"> <input id="createItemInput" type="text"></div>
+        </div>
+
+        <div class="doneModal" id="doneModal">
+            <h2>Things I've done!</h2>
+            <br>
+            <div id="done-container"></div>
+        </div>
+
+        <div id="todo-container"></div>
+
+        <script src="..\todo-list\scripts\global-storage.js"></script>
+        <script src="..\todo-list\scripts\guid-generator.js"></script>
+        <script src="..\todo-list\scripts\todo-item.js"></script>
+        <script src="..\todo-list\scripts\done-item.js"></script>
+        <script src="..\todo-list\scripts\ui-controller.js"></script>
     </body>
 </html>
