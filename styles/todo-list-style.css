@@ -12,12 +12,16 @@ h1 {
  
 }       
 
-.todo-item {
+.todo-item,
+i {
     font-size: 25px;
     line-height: 0px;
-    text-align:left ;
-    margin-left: 27%;
     margin-top: 0px;
+}
+
+.todo-item { 
+    text-align:left ;
+    margin-left: 30%;
 }
 
 h1, img {
@@ -41,12 +45,17 @@ img:hover {
     position: absolute;
     left: 47%;
     top: 18%;
-    width: 400px;
-    background-color: rgba(157, 216, 240, 0.712);
+    width: 450px;
+    background-color: rgba(157, 216, 240, 0.795);
     border-radius: 15px;
     opacity: 1;
     visibility: hidden;
-    
+}
+.doneModal i {
+    font-size: 100%;
+}
+.doneModal p {
+    margin-left: 5%;
 }
 
 .showDoneModal {
@@ -56,8 +65,8 @@ img:hover {
 h2 {
     margin-top: 10%;
     font-size: 180%;
-    margin-bottom: 15px;
-    margin-left: 11%;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 .done-item {
@@ -74,14 +83,14 @@ h2 {
 .add {
     margin-top: 15px;
     margin-bottom: 6px;
-    margin-left: 640px;
+    margin-left: 35%;
     width: 35px;
 }
 
 /* ----- CREATE ITEM ----- */
 .createItemModal {
     position: absolute;
-    left: 20%;
+    left: 21%;
     top: 21%;
     width: 0px;
     height: 0px;
@@ -112,11 +121,11 @@ h2 {
 }
 
 i {
-    color: rgb(110, 110, 110);
+    color: rgb(141, 141, 141);
+    padding-left: 15px;
 }
 
 i:hover {
-    color: rgb(138, 137, 137);
+    color: rgb(189, 189, 189);
     cursor: pointer;
 }
-

@@ -2,19 +2,21 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="..\todo-list\styles\todo-list-style.css">
+        <link rel="stylesheet" type="text/css" href=".\styles\todo-list-style.css">
+        <link rel="stylesheet" type="text/css" href=".\queries\queries-height.css">
+        <link rel="stylesheet" type="text/css" href=".\queries\queries-width.css">
         <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet">
 
         <title>To do list</title>
     </head>        
     <body>
 
-        <h1>Things to do</h1> <img id="checkmark" src="..\todo-list\images\checkmark.jpg">
+        <h1>Things to do</h1> <img id="checkmark" src=".\images\checkmark.jpg">
 
-        <div><img id="add" class="add" src="..\todo-list\images\plus.png"></div>
+        <div><img id="add" class="add" src=".\images\plus.png"></div>
 
         <div class="createItemModal" id="createItemModal">
-            <div id="done-container"> <input id="createItemInput" type="text"></div>
+            <div> <input id="createItemInput" type="text"></div>
         </div>
 
         <div class="doneModal" id="doneModal">
@@ -25,10 +27,11 @@
 
         <div id="todo-container"></div>
 
-        <script src="..\todo-list\scripts\global-storage.js"></script>
-        <script src="..\todo-list\scripts\guid-generator.js"></script>
-        <script src="..\todo-list\scripts\todo-item.js"></script>
-        <script src="..\todo-list\scripts\done-item.js"></script>
-        <script src="..\todo-list\scripts\ui-controller.js"></script>
+        <script src=".\scripts\global-storage.js"></script>
+        <script src=".\scripts\guid-generator.js"></script>
+        <script src=".\scripts\todo-item.js"></script>
+        <script src=".\scripts\ui-controller.js"></script>
+        <script src=".\scripts\item-controller.js"></script>
+
     </body>
 </html>

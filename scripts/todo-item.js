@@ -7,26 +7,23 @@ function TodoItem(descricao, tipo, paiId) {
     this.elementoPai = document.getElementById(paiId);
 }
 
-// Array that holds the items
-var itemController = [];
-
 TodoItem.prototype.create = function() {
     var todoHtml = document.getElementById(this.id);
     if (todoHtml)
         return;
 
-    var htmlCode = `<p class="todo-item" id="${this.id}"><input type="checkbox" id="ckb-${this.id}"> ${this.descricao} <i class="icon ion-ios-trash" class="trash" id="trash" onclick="deleteItem(this)"></i></p>`;
-    this.elementoPai.insertAdjacentHTML('afterend', htmlCode);
-    this.todoElement = document.getElementById(this.id);
+    var htmlCode = `<p class="todo-item" id="${this.id}"><input type="checkbox" id="ckb-${this.id}"> <span id="descricao-${this.id}">${this.descricao}</span>  <i class="icon ion-ios-trash" class="trash" id="trash-${this.id}"></i><i class="icon ion-md-create" id="update-${this.id}"></i></p>`;
+    this.elementoPai.insertAdjacentHTML('beforeend', htmlCode);
+
     this.todoCheck = document.getElementById(`ckb-${this.id}`);
-    var input = document.getElementById('createItemInput');
-    this.tipo = 'todo';
-
-    itemController.push(this);
-
-    input.value = "";
+    this.todoTrash = document.getElementById(`trash-${this.id}`);
+    this.todoUpdate = document.getElementById(`update-${this.id}`);
+    this.todoDescription = document.getElementById(this.id);
 
     this.todoCheck.addEventListener('click', this.check.bind(this));    
+    this.todoTrash.addEventListener('click', this.delete.bind(this));
+    this.todoUpdate.addEventListener('click', this.edit.bind(this));
+
     globalStorage.add(this.id, this);
 
 }
@@ -35,11 +32,9 @@ TodoItem.prototype.remove = function() {
     var todoHtml = document.getElementById(this.id);
     if (todoHtml)
     {
-        itemController.splice(todoHtml, 1);
-        todoHtml.parentNode.removeChild(todoHtml);
+        this.elementoPai.removeChild(todoHtml);
 
-        // com o id do pai remove item com esse id
-        // remove do global storage
+        globalStorage.remove(this.id)
 
     }
 }
@@ -48,16 +43,38 @@ TodoItem.prototype.update = function(newDescription) {
     var todoHtml = document.getElementById(this.id);
     if (todoHtml)
     {
-        // busca o elemento que tem a newDescription
-        // atualiza no global storage (deletar e criar denovo)
+
+        document.getElementById(`descricao-${this.id}`).textContent = newDescription;
+        globalStorage.remove(this.id);
+        globalStorage.add(this.id, this);
+
     }
 }
 
-TodoItem.prototype.registerCallback = function(callback) {
-    this.aQuemChamar = callback;
+TodoItem.prototype.registerUpdateCallback = function(callback) {
+    this.aQuemChamarEdit = callback;
+}
+
+TodoItem.prototype.registerCheckCallback = function(callback) {
+    this.aQuemChamarCheck = callback;
+}
+
+TodoItem.prototype.registerDeleteCallback = function(callback) {
+    this.aQuemChamarDelete = callback;
 }
 
 TodoItem.prototype.check = function() {
-    if (this.aQuemChamar != undefined)
-        this.aQuemChamar(this.id);
+    if (this.aQuemChamarCheck != undefined)
+        this.aQuemChamarCheck(this.id, this.tipo);
 }
+
+TodoItem.prototype.delete = function() {
+    if (this.aQuemChamarDelete != undefined)
+        this.aQuemChamarDelete(this.id);
+}
+
+TodoItem.prototype.edit = function() {
+    if (this.aQuemChamarEdit != undefined)
+        this.aQuemChamarEdit(this.id);
+}
+

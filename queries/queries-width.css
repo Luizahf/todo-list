@@ -1,0 +1,61 @@
+
+@media only screen and (max-width: 1815px)
+{   
+    .doneModal {left: 50%;} 
+    .createItemModal {left: 19%;}
+
+}
+
+@media only screen and (max-width: 1600px)
+{
+    .createItemModal {left: 17%;}
+    .doneModal {left: 52%;} 
+    .add {margin-left: 38%}
+}
+
+@media only screen and (max-width: 1420px)
+{
+    .doneModal {left: 55%;} 
+}
+
+@media only screen and (max-width: 1280px)
+{
+    .doneModal {left: 60%;} 
+    .add {margin-left: 40%;}
+}
+
+@media only screen and (max-width: 1100px)
+{
+    .doneModal {left: 62%; top: 30%; background-color: rgba(157, 216, 240, 0.993);} 
+    .createItemModal {left: 12%;}
+    .add {margin-left: 42%;}
+}
+
+@media only screen and (max-width: 1054px)
+{
+    .doneModal {width: 350px; font-size: 90%; left: 65%;}
+}
+@media only screen and (max-width: 1000px)
+{
+    .doneModal {left: 40%;} 
+}
+@media only screen and (max-width: 850px)
+{
+    .createItemModal input {width: 200px;}
+}
+
+@media only screen and (max-width: 700px)
+{
+    h1 {font-size: 250%; margin-left: 30%;}
+    .createItemModal {top: 29%; left: 40%;}
+    .add {margin-left: 52%;}
+    .doneModal {top: 35%;} 
+}
+
+@media only screen and (max-width: 570px)
+{
+    h1 {margin-left: 20%; font-size: 245%}
+    .add {margin-left: 49%;}
+    .doneModal {left: 23%;} 
+    .createItemModal {left: 33%;}
+}

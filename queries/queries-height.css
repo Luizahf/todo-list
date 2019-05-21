@@ -1,0 +1,84 @@
+@media only screen and (max-height: 890px)
+{
+    .doneModal {top: 20%;} 
+    .createItemModal {top: 23%;}
+}
+@media only screen and (max-height: 840px)
+{
+    .createItemModal {top: 24%;}
+}
+@media only screen and (max-height: 800px)
+{
+    .doneModal {top: 23%;} 
+    .createItemModal {top: 25%;}
+}
+@media only screen and (max-height: 765px)
+{
+    .createItemModal {top: 26%;}
+}
+@media only screen and (max-height: 740px)
+{
+    .createItemModal {top: 27%;}
+}
+@media only screen and (max-height: 705px)
+{
+    .doneModal {top: 26%;} 
+    .createItemModal {top: 28%;}
+}   
+@media only screen and (max-height: 680px)
+{
+    .createItemModal {top: 29%;}
+}
+
+@media only screen and (max-height: 610px)
+{
+    .doneModal {top: 30%;} 
+    .createItemModal {top: 33%;}
+}
+
+@media only screen and (max-height: 650px)
+{
+    .doneModal {top: 35%;} 
+    .createItemModal {top: 38%;}
+}
+@media only screen and (max-height: 490px)
+{
+    .createItemModal {top: 41%;}
+}
+@media only screen and (max-height: 460px)
+{
+    .createItemModal {top: 44%;}
+}
+@media only screen and (max-height: 433px)
+{
+    .doneModal {top: 40%;} 
+    .createItemModal {top: 47%;}
+}
+@media only screen and (max-height: 400px)
+{
+    .doneModal {top: 45%;} 
+    .createItemModal {top: 50%;}
+}
+@media only screen and (max-height: 380px)
+{
+    .doneModal {top: 50%;} 
+    .createItemModal {top: 53%;}
+}
+@media only screen and (max-height: 355px)
+{
+    .createItemModal {top: 57%;}
+}
+@media only screen and (max-height: 330px)
+{
+    .createItemModal {top: 61%;}
+}
+@media only screen and (max-height: 310px)
+{
+    .doneModal {top: 54%;} 
+    .createItemModal {top: 65%;}
+}
+@media only screen and (max-height: 290px)
+{
+    .doneModal {top: 60%;} 
+    .createItemModal {top: 70%;}
+}
